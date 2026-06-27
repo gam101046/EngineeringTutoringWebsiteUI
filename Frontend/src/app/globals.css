@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans Thai", "Inter", sans-serif;
+  background: #fafafa;
+  color: #1a1a1a;
+}
+
+.ant-layout {
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.page-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #f9f0f1 0%, #ffffff 55%, #fef3ea 100%);
+}
+
+.auth-gradient {
+  background: linear-gradient(135deg, #f9f0f1 0%, #fef3ea 100%);
+}
