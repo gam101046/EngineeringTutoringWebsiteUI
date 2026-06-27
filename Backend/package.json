@@ -1,0 +1,21 @@
+{
+  "name": "Backend",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "db:push": "bunx prisma db push",
+    "db:studio": "bunx prisma studio",
+    "db:migrate": "bunx prisma migrate deploy"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prisma": "^7.8.0"
+  },
+  "module": "src/index.js"
+}

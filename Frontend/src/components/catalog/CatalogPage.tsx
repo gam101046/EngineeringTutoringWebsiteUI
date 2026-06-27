@@ -10,6 +10,7 @@ import { MAROON } from "@/lib/theme";
 
 const { Title, Text } = Typography;
 
+
 export default function CatalogPage() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category");
