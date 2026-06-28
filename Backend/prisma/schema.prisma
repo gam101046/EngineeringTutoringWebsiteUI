@@ -1,13 +1,24 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider        = "prisma-client-js"
+  output          = "../src/generated/prisma"
+  engineType      = "library"
+}
+
+generator prismabox {
+  provider                    = "prismabox"
+  output                      = "../generated/prismabox"
+  inputModel                  = "true"
+  typeboxImportDependencyName = "elysia"
+  typeboxImportVariableName   = "t"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
+}
+
+model Example {
+  id     String   @id @default(cuid())
+  name   String   @unique
+  detail String
+  price  Decimal?
 }
